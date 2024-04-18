@@ -127,6 +127,7 @@ type Embed struct {
 	Type        string                 `json:"type,omitempty"`
 	Description string                 `json:"description,omitempty"`
 	URL         string                 `json:"url,omitempty"`
+	Timestamp   *string                `json:"timestamp,omitempty"`
 	Image       *MessageEmbedImage     `json:"image,omitempty"`
 	Color       int                    `json:"color,omitempty"`
 	Footer      EmbedFooter            `json:"footer,omitempty"`

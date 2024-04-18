@@ -16,15 +16,16 @@ var (
 )
 
 type Gateway struct {
-	CloseChan  chan struct{}
-	Closed     bool
-	Config     *types.Config
-	Connection *websocket.Conn
-	GatewayURL string
-	Handlers   Handlers
-	LastSeq    int
-	Selfbot    *Selfbot
-	SessionID  string
+	CloseChan         chan struct{}
+	Closed            bool
+	Config            *types.Config
+	Connection        *websocket.Conn
+	GatewayURL        string
+	Handlers          Handlers
+	LastSeq           int
+	Selfbot           *Selfbot
+	SessionID         string
+	ClientBuildNumber string
 
 	heartbeatInterval time.Duration
 }
@@ -34,7 +35,7 @@ func CreateGateway(selfbot *Selfbot, config *types.Config) *Gateway {
 		headers.Set("Host", "gateway.discord.gg")
 		headers.Set("User-Agent", config.UserAgent)
 	}
-	return &Gateway{CloseChan: make(chan struct{}), Selfbot: selfbot, GatewayURL: "wss://gateway.discord.gg/?encoding=json&v=" + config.ApiVersion, Config: config}
+	return &Gateway{CloseChan: make(chan struct{}), Selfbot: selfbot, GatewayURL: "wss://gateway.discord.gg/?encoding=json&v=" + config.ApiVersion, Config: config, ClientBuildNumber: clientBuildNumber}
 }
 
 func (gateway *Gateway) Connect() error {
