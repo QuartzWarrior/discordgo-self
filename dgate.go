@@ -1,8 +1,8 @@
 package dgate
 
 import (
-	"github.com/luminaldev/dgate/discord"
-	"github.com/luminaldev/dgate/types"
+	"github.com/QuartzWarrior/discordgo-self/discord"
+	"github.com/QuartzWarrior/discordgo-self/types"
 )
 
 type Client struct {

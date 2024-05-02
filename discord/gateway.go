@@ -8,7 +8,7 @@ import (
 
 	"github.com/fasthttp/websocket"
 	"github.com/goccy/go-json"
-	"github.com/luminaldev/dgate/types"
+	"github.com/QuartzWarrior/discordgo-self/types"
 )
 
 var (

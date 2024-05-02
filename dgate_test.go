@@ -2,7 +2,7 @@ package dgate
 
 import (
 	"fmt"
-	"github.com/luminaldev/dgate/types"
+	"github.com/QuartzWarrior/discordgo-self/types"
 	"os"
 	"testing"
 	"time"

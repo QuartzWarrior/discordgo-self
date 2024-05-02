@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/luminaldev/dgate/types"
+	"github.com/QuartzWarrior/discordgo-self/types"
 )
 
 type Handlers struct {

@@ -152,18 +152,32 @@ type GuildMembersChunkEventData struct {
 	ChunkCount int    `json:"chunk_count"`
 }
 type MessageData struct {
-	Type             int                `json:"type,omitempty"`
-	Content          string             `json:"content,omitempty"`
-	ChannelID        string             `json:"channel_id,omitempty"`
-	Embeds           []Embed            `json:"embeds,omitempty"`
-	Reactions        []Reaction         `json:"reactions,omitempty"`
-	Author           User               `json:"author,omitempty"`
-	GuildID          string             `json:"guild_id,omitempty"`
-	MessageId        string             `json:"id,omitempty"`
-	Components       []MessageComponent `json:"components,omitempty"`
-	Attachments      []Attachment       `json:"attachments,omitempty"`
-	Flags            int                `json:"flags,omitempty"`
-	MessageReference MessageReference   `json:"message_reference,omitempty"`
+	ID                string             `json:"id"`
+	ChannelID         string             `json:"channel_id"`
+	GuildID           string             `json:"guild_id"`
+	Author            User               `json:"author"`
+	Content           string             `json:"content"`
+	Timestamp         string             `json:"timestamp"`
+	EditedTimestamp   string             `json:"edited_timestamp"`
+	Tts               bool               `json:"tts"`
+	MentionEveryone   bool               `json:"mention_everyone"`
+	Mentions          []User             `json:"mentions"`
+	MentionRoles      []string           `json:"mention_roles"`
+	MentionChannels   []string           `json:"mention_channels"`
+	Attachments       []Attachment       `json:"attachments"`
+	Embeds            []Embed            `json:"embeds"`
+	Reactions         []Reaction         `json:"reactions"`
+	Nonce             string             `json:"nonce"`
+	Pinned            bool               `json:"pinned"`
+	WebhookID         string             `json:"webhook_id"`
+	Type              int                `json:"type"`
+	Activity          MessageActivity    `json:"activity"`
+	Application       MessageApplication `json:"application"`
+	Flags             int                `json:"flags"`
+	ReferencedMessage MessageReference   `json:"referenced_message"`
+	Interaction       MessageInteraction `json:"interaction"`
+	Thread            Channel            `json:"thread"`
+	StickerItems      []StickerItem      `json:"sticker_items"`
 }
 
 type Attachment struct {
@@ -182,4 +196,47 @@ type MessageReference struct {
 	ChannelID string `json:"channel_id"`
 	MessageID string `json:"message_id"`
 	GuildID   string `json:"guild_id"`
+}
+
+type MessageActivity struct {
+	Type    int    `json:"type"`
+	PartyID string `json:"party_id"`
+}
+
+type MessageApplication struct {
+	ID          string `json:"id"`
+	CoverImage  string `json:"cover_image"`
+	Description string `json:"description"`
+	Icon        string `json:"icon"`
+	Name        string `json:"name"`
+}
+
+type MessageInteraction struct {
+	ID   string `json:"id"`
+	Type int    `json:"type"`
+	Name string `json:"name"`
+	User User   `json:"user"`
+}
+
+type StickerItem struct {
+	ID           string `json:"id"`
+	Name         string `json:"name"`
+	FormatType   uint64 `json:"format_type"`
+	Asset        string `json:"asset"`
+	PreviewAsset string `json:"preview_asset"`
+	Type         uint64 `json:"type"`
+}
+
+type Channel struct {
+	ID               string `json:"id"`
+	GuildID          string `json:"guild_id"`
+	Name             string `json:"name"`
+	Type             int    `json:"type"`
+	Topic            string `json:"topic"`
+	Nsfw             bool   `json:"nsfw"`
+	Position         int    `json:"position"`
+	Icon             string `json:"icon"`
+	LastMessageID    string `json:"last_message_id"`
+	ParentID         string `json:"parent_id"`
+	LastPinTimestamp string `json:"last_pin_timestamp"`
 }
