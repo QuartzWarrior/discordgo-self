@@ -1,8 +1,8 @@
-# dgate
+# discordgo-self
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/luminaldev/dgate)](https://goreportcard.com/report/github.com/luminaldev/dgate)
-[![GoDoc](https://godoc.org/github.com/luminaldev/dgate?status.svg)](https://godoc.org/github.com/luminaldev/dgate)
-![Lines of Code](https://img.shields.io/github/languages/code-size/luminaldev/dgate)
+[![Go Report Card](https://goreportcard.com/badge/github.com/QuartzWarrior/discordgo-self)](https://goreportcard.com/report/github.com/QuartzWarrior/discordgo-self)
+[![GoDoc](https://godoc.org/github.com/QuartzWarrior/discordgo-self?status.svg)](https://godoc.org/github.com/QuartzWarrior/discordgo-self)
+![Lines of Code](https://img.shields.io/github/languages/code-size/QuartzWarrior/discordgo-self)
 
 - [dgate](#dgate)
   - [Features](#features)
@@ -23,7 +23,7 @@ A performant self-bot Discord API wrapper for Go. It focuses on being powerful t
 **dgate** can be installed by using *go get*:
 
 ```
-go get github.com/luminaldev/dgate
+go get github.com/QuartzWarrior/discordgo-self
 ```
 
 After this command has been run, **dgate** is ready to use. **dgate** can be updated by using *go get -u*:
