@@ -1,4 +1,4 @@
-package dgate
+package selfcord
 
 import (
 	"fmt"

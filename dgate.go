@@ -1,4 +1,4 @@
-package dgate
+package selfcord
 
 import (
 	"github.com/QuartzWarrior/discordgo-self/discord"
