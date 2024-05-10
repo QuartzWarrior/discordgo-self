@@ -1,6 +1,6 @@
 module github.com/QuartzWarrior/discordgo-self
 
-go 1.21
+go 1.22
 
 require (
 	github.com/fasthttp/websocket v1.5.8

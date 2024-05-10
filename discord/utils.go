@@ -2,13 +2,13 @@ package discord
 
 import (
 	"encoding/base64"
-	"encoding/json"
 	"fmt"
 	"math/rand"
 	"strings"
 	"time"
 
 	"github.com/QuartzWarrior/discordgo-self/types"
+	"github.com/goccy/go-json"
 )
 
 const DiscordEpoch = 1420070400000
