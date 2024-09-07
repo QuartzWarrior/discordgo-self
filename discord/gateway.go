@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/QuartzWarrior/discordgo-self/types"
 	"github.com/fasthttp/websocket"
 	"github.com/goccy/go-json"
-	"github.com/QuartzWarrior/discordgo-self/types"
 )
 
 var (

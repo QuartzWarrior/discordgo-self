@@ -18,7 +18,7 @@ func UtcNow() time.Time {
 }
 
 func TimeSnowflake(dt time.Time, high bool) int64 {
-	discordMillis := int64(dt.UnixNano()/1e6 - DiscordEpoch)
+	discordMillis := dt.UnixNano()/1e6 - DiscordEpoch
 	if high {
 		return (discordMillis << 22) + (1<<22 - 1)
 	}

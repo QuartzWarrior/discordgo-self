@@ -165,6 +165,7 @@ type MessageData struct {
 	MentionRoles      []string           `json:"mention_roles"`
 	MentionChannels   []string           `json:"mention_channels"`
 	Attachments       []Attachment       `json:"attachments"`
+	Components        []MessageComponent `json:"components"`
 	Embeds            []Embed            `json:"embeds"`
 	Reactions         []Reaction         `json:"reactions"`
 	Nonce             string             `json:"nonce"`

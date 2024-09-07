@@ -201,3 +201,31 @@ type ButtonEmoji struct {
 	ID       string `json:"id,omitempty"`
 	Animated bool   `json:"animated,omitempty"`
 }
+
+type Application struct {
+	ID          string `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Icon        string `json:"icon"`
+	BotID       string `json:"bot_id"`
+	Flags       string `json:"flags"`
+}
+
+type ApplicationCommand struct {
+	ID                   string `json:"id"`
+	Type                 int    `json:"type"`
+	ApplicationID        string `json:"application_id"`
+	Version              string `json:"version"`
+	Name                 string `json:"name"`
+	Description          string `json:"description"`
+	DescriptionDefault   string `json:"description_default"`
+	DMPermission         bool   `json:"dm_permission"`
+	IntegrationTypes     []int  `json:"integration_types"`
+	GlobalPopularityRank int    `json:"global_popularity_rank"`
+}
+
+type ApplicationCommandIndex struct {
+	Applications       []Application        `json:"applications"`
+	ApplicationCommand []ApplicationCommand `json:"application_commands"`
+	Version            *string              `json:"version,omitempty"`
+}
